@@ -1,13 +1,11 @@
-def kesha_maker(array)
-  
-  
-  array.each do |index|
-    if index.length < 3
-      puts index
+def add_s(array)
+  array.collect do |string|
+    if array.index(string) == 1
+      string
     else 
-      second_array = index.split("")
-      second_array[2] = "$"
-      array.index(index) = second_array.join("")
+      string + "s"
     end
   end
 end
+
+def add_stwo(array)
